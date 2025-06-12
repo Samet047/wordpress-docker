@@ -1,0 +1,21 @@
+.wrap {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+h1 {
+    color: #23282d;
+}
+.form-table th {
+    width: 200px;
+}
+.form-table input[type="text"] {
+    width: 100%;
+    max-width: 400px;
+}
+.description {
+    color: #666;
+    font-style: italic;
+}

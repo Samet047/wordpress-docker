@@ -1,0 +1,8 @@
+# Docker
+wp-data/
+db_data/
+*.log
+
+# System
+.DS_Store
+.env

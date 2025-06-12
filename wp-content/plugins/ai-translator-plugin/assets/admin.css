@@ -1,0 +1,10 @@
+
+.notice-info {
+    border-left: 4px solid #00a0d2;
+    padding: 10px 15px;
+    margin: 15px 0;
+}
+.notice-info code {
+    background: #f0f0f1;
+    padding: 2px 4px;
+}

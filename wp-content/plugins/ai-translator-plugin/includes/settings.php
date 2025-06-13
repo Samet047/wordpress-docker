@@ -1,4 +1,3 @@
-<link rel="stylesheet" href="style.css">
 <?php
 function ai_translator_plugin_options() {
     ?>
@@ -53,9 +52,21 @@ function ai_translator_plugin_options() {
     <?php
 }
 
+
 function ai_translator_plugin_settings() {
     register_setting('ai-translator-plugin-settings-group', 'ai_google_api_key');
     register_setting('ai-translator-plugin-settings-group', 'ai_deepl_api_key');
     register_setting('ai-translator-plugin-settings-group', 'ai_preferred_api');
 }
+
+function ai_translator_plugin_admin_styles($hook) {
+    // Sadece kendi ayar sayfamızdaysa yükle
+    if ($hook != 'settings_page_ai-translator-plugin') {
+        return;
+    }
+
+    wp_enqueue_style('ai-translator-plugin-admin-style', plugins_url('../style.css', __FILE__));
+}
+add_action('admin_enqueue_scripts', 'ai_translator_plugin_admin_styles');
+
 ?>
